@@ -1,6 +1,6 @@
-# This is where all the data will be stored. Fred50
-# You can change any of the stuff that is generated
+# To jest plik w ktorym sa zapisane dane przestepstw.
+# Mozesz to wszystko zmienic edytujac ten plik.
 Players:
   Fred50:
     Infractions:
-      1
+      0
