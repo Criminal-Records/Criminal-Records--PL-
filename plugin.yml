@@ -1,6 +1,6 @@
 name: Criminal Records (PL)
 main: me.fred50.criminal.CriminalRecords
-version: 1.2
+version: 1.1
 description: >
              Dodatek dodajacy liste poszukiwanych przestepcow.
 commands:
