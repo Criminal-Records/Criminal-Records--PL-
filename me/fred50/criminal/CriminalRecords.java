@@ -115,10 +115,10 @@ public class CriminalRecords extends JavaPlugin {
 						correct1 = true;
 						if(!getConfig().contains("Players." + player.getName() + ".Infractions")){
 							getConfig().get("Players." + player.getName() + ".Infractions");
-							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "!");
+							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "punktow przestepstw!");
 						}else{
 							getConfig().get("Players." + player.getName() + ".WarningPoints");
-							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "!");
+							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "punktow przestepstw!");
 						}
 					}else{
 						player.sendMessage(ChatColor.RED + "Nie posiadasz uprawnien!");
@@ -156,7 +156,7 @@ public class CriminalRecords extends JavaPlugin {
 						    getConfig().addDefault("Players." + player.getName() + ".Infractions", 1);
 						    player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Pomyslnie dodano przestepstwo do konta " + targetPlayer.getName() + "!");
 						    getConfig().get("Players." + player.getName() + ".Infractions");
-						    player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz teraz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "!");
+						    player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz teraz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "punktow przestepstw!");
 							getConfig().options().copyDefaults(true);
 							saveConfig();
 						} else {
@@ -166,7 +166,7 @@ public class CriminalRecords extends JavaPlugin {
 							saveConfig();
 							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Pomyslnie dodano przestepstwo do konta " + targetPlayer.getName() + "!");
 							getConfig().get("Players." + player.getName() + ".Infractions");
-							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz teraz ma " + getConfig().getInt("Players." + player.getName() +".Infractions"));
+							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz teraz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "punktow przestepstw!");
 						}
 					}else{
 						player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.RED + "Nie posiadasz uprawnien!");
