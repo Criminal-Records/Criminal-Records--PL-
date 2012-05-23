@@ -117,7 +117,7 @@ public class CriminalRecords extends JavaPlugin {
 							getConfig().get("Players." + player.getName() + ".Infractions");
 							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "punktow przestepstw!");
 						}else{
-							getConfig().get("Players." + player.getName() + ".WarningPoints");
+							getConfig().get("Players." + player.getName() + ".Infractions");
 							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "punktow przestepstw!");
 						}
 					}else{
@@ -136,7 +136,7 @@ public class CriminalRecords extends JavaPlugin {
 							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Pomyslnie usunales przestepstwo z konta " + targetPlayer.getName() + "!");
 							saveConfig();
 						} else {
-							getConfig().set("Players." + player.getName() + ".WarningPoints", 0);
+							getConfig().set("Players." + player.getName() + ".Infractions", 0);
 							getConfig().options().copyDefaults(true);
 							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Pomyslnie usunales przestepstwo z konta " + targetPlayer.getName() + "!");
 							saveConfig();
