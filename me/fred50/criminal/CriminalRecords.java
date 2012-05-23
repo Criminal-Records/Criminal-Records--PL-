@@ -113,12 +113,12 @@ public class CriminalRecords extends JavaPlugin {
 				if (whatisit1.equalsIgnoreCase("zobacz")) {
 					if(player.hasPermission("criminal.menu.view")){
 						correct1 = true;
-						if(!getConfig().contains("Players." + player.getName() + ".Infractions")){
-							getConfig().get("Players." + player.getName() + ".Infractions");
-							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "punktow przestepstw!");
+						if(!getConfig().contains("Players." + targetPlayer.getName() + ".Infractions")){
+							getConfig().get("Players." + targetPlayer.getName() + ".Infractions");
+							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz ma " + getConfig().getInt("Players." + targetPlayer.getName() +".Infractions") + " punktow przestepstw!");
 						}else{
-							getConfig().get("Players." + player.getName() + ".Infractions");
-							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "punktow przestepstw!");
+							getConfig().get("Players." + targetPlayer.getName() + ".Infractions");
+							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz ma " + getConfig().getInt("Players." + targetPlayer.getName() +".Infractions") + " punktow przestepstw!");
 						}
 					}else{
 						player.sendMessage(ChatColor.RED + "Nie posiadasz uprawnien!");
@@ -130,13 +130,13 @@ public class CriminalRecords extends JavaPlugin {
 					if(player.hasPermission("criminal.menu.clear")){
 						correct1 = true;
 						
-						if (!getConfig().contains("Players." + player.getName() + ".Infractions")) {
-						    getConfig().addDefault("Players." + player.getName() + ".Infractions", 0);
+						if (!getConfig().contains("Players." + targetPlayer.getName() + ".Infractions")) {
+						    getConfig().addDefault("Players." + targetPlayer.getName() + ".Infractions", 0);
 							getConfig().options().copyDefaults(true);
 							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Pomyslnie usunales przestepstwo z konta " + targetPlayer.getName() + "!");
 							saveConfig();
 						} else {
-							getConfig().set("Players." + player.getName() + ".Infractions", 0);
+							getConfig().set("Players." + targetPlayer.getName() + ".Infractions", 0);
 							getConfig().options().copyDefaults(true);
 							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Pomyslnie usunales przestepstwo z konta " + targetPlayer.getName() + "!");
 							saveConfig();
@@ -152,21 +152,21 @@ public class CriminalRecords extends JavaPlugin {
 					if(player.hasPermission("criminal.menu.add")){
 						correct1 = true;
 						
-						if (!getConfig().contains("Players." + player.getName() + ".Infractions")) {
-						    getConfig().addDefault("Players." + player.getName() + ".Infractions", 1);
+						if (!getConfig().contains("Players." + targetPlayer.getName() + ".Infractions")) {
+						    getConfig().addDefault("Players." + targetPlayer.getName() + ".Infractions", 1);
 						    player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Pomyslnie dodano przestepstwo do konta " + targetPlayer.getName() + "!");
-						    getConfig().get("Players." + player.getName() + ".Infractions");
-						    player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz teraz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "punktow przestepstw!");
+						    getConfig().get("Players." + targetPlayer.getName() + ".Infractions");
+						    player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz teraz ma " + getConfig().getInt("Players." + targetPlayer.getName() +".Infractions") + " punktow przestepstw!");
 							getConfig().options().copyDefaults(true);
 							saveConfig();
 						} else {
-							int current = getConfig().getInt("Players." + player.getName() + ".Infractions");
-							getConfig().set("Players." + player.getName() + ".Infractions", current + 1);
+							int current = getConfig().getInt("Players." + targetPlayer.getName() + ".Infractions");
+							getConfig().set("Players." + targetPlayer.getName() + ".Infractions", current + 1);
 							getConfig().options().copyDefaults(true);
 							saveConfig();
 							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Pomyslnie dodano przestepstwo do konta " + targetPlayer.getName() + "!");
-							getConfig().get("Players." + player.getName() + ".Infractions");
-							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz teraz ma " + getConfig().getInt("Players." + player.getName() +".Infractions") + "punktow przestepstw!");
+							getConfig().get("Players." + targetPlayer.getName() + ".Infractions");
+							player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.GOLD + "Ten gracz teraz ma " + getConfig().getInt("Players." + targetPlayer.getName() +".Infractions") + " punktow przestepstw!");
 						}
 					}else{
 						player.sendMessage(ChatColor.DARK_PURPLE + "[CR] " + ChatColor.RED + "Nie posiadasz uprawnien!");
