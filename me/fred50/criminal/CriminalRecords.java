@@ -66,6 +66,35 @@ public class CriminalRecords extends JavaPlugin {
 	    
 		getConfig().options().copyDefaults(true);
 		saveConfig();
+
+	    if (!getConfig().contains("cfg")) {
+		String[] config = {};
+		
+		getConfig().addDefault("cfg",
+				Arrays.asList(config));
+		
+	    }
+	    
+		int list055;
+		list055 = 0;
+
+		int limit2;
+		limit2 = getConfig().getStringList("cfg").size();
+		while (limit2 > list055) {
+			
+			String loadplayer = getConfig().getStringList(
+					"cfg").get(list055);
+			
+			int playerammount = getConfig().getInt("CR." + loadplayer + ".Ammount");
+			
+			CriminalRecords.counts.put(loadplayer, playerammount);
+			
+			list055++;
+		}
+	    
+	    
+		getConfig().options().copyDefaults(true);
+		saveConfig();
 		
 	}
 	
